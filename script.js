@@ -1,8 +1,11 @@
+// ==========================
 // SMOOTH SCROLL
+// ==========================
 document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", function(e) {
         const href = this.getAttribute("href");
 
+        // allow page navigation (for service pages)
         if (href.includes(".html")) return;
 
         e.preventDefault();
@@ -18,23 +21,29 @@ document.querySelectorAll("nav a").forEach(link => {
 });
 
 
-// FAQ ACCORDION
+// ==========================
+// FAQ ACCORDION (UPDATED)
+// ==========================
 document.querySelectorAll(".faq-item button").forEach(button => {
     button.addEventListener("click", () => {
-        const content = button.nextElementSibling;
 
-        document.querySelectorAll(".content").forEach(c => {
-            if (c !== content) c.style.maxHeight = null;
+        const item = button.parentElement;
+
+        // close all others (accordion behavior)
+        document.querySelectorAll(".faq-item").forEach(el => {
+            if (el !== item) el.classList.remove("active");
         });
 
-        content.style.maxHeight =
-            content.style.maxHeight ? null : content.scrollHeight + "px";
+        // toggle current
+        item.classList.toggle("active");
     });
 });
 
 
-// DRAG SCROLL
-const slider = document.querySelector(".horizontal-scroll");
+// ==========================
+// HORIZONTAL DRAG SCROLL (PROCESS)
+// ==========================
+const slider = document.querySelector(".scroll");
 
 let isDown = false;
 let startX;
@@ -43,16 +52,25 @@ let scrollLeft;
 if (slider) {
     slider.addEventListener("mousedown", e => {
         isDown = true;
+        slider.classList.add("active");
         startX = e.pageX - slider.offsetLeft;
         scrollLeft = slider.scrollLeft;
     });
 
-    slider.addEventListener("mouseleave", () => isDown = false);
-    slider.addEventListener("mouseup", () => isDown = false);
+    slider.addEventListener("mouseleave", () => {
+        isDown = false;
+        slider.classList.remove("active");
+    });
+
+    slider.addEventListener("mouseup", () => {
+        isDown = false;
+        slider.classList.remove("active");
+    });
 
     slider.addEventListener("mousemove", e => {
         if (!isDown) return;
         e.preventDefault();
+
         const x = e.pageX - slider.offsetLeft;
         const walk = (x - startX) * 2;
         slider.scrollLeft = scrollLeft - walk;
@@ -60,24 +78,26 @@ if (slider) {
 }
 
 
-// SCROLL REVEAL
+// ==========================
+// SCROLL REVEAL ANIMATION
+// ==========================
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
+            entry.target.classList.add("show");
         }
     });
 }, { threshold: 0.1 });
 
-document.querySelectorAll(".card, .section").forEach(el => {
-    el.style.opacity = 0;
-    el.style.transform = "translateY(30px)";
+document.querySelectorAll(".card, .section, .step, .faq-item").forEach(el => {
+    el.classList.add("hidden");
     observer.observe(el);
 });
 
 
-// ACTIVE NAV
+// ==========================
+// ACTIVE NAV LINK
+// ==========================
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
 
@@ -85,7 +105,7 @@ window.addEventListener("scroll", () => {
     let current = "";
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
+        const sectionTop = section.offsetTop - 120;
         if (scrollY >= sectionTop) {
             current = section.getAttribute("id");
         }

@@ -1,72 +1,31 @@
-/* =========================
-   SMOOTH SCROLL NAVIGATION
-========================= */
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
+// =========================
+// script.js (INTERACTIVE)
+// =========================
+// smooth scroll
+document.querySelectorAll('nav a').forEach(link=>{
+link.addEventListener('click',e=>{
+e.preventDefault();
+const t=document.querySelector(link.getAttribute('href'));
+window.scrollTo({top:t.offsetTop-60,behavior:'smooth'});
+});});
 
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
+// FAQ toggle
+document.querySelectorAll('.faq-item button').forEach(btn=>{
+btn.addEventListener('click',()=>{
+const c=btn.nextElementSibling;
+c.style.display=c.style.display==='block'?'none':'block';
+});});
 
-        if (targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop - 70,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
+// Team modal
+const modal=document.getElementById('modal');
+const modalBody=document.getElementById('modalBody');
+const close=document.getElementById('closeModal');
 
-/* =========================
-   ACTIVE NAV LINK HIGHLIGHT
-========================= */
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('nav a');
+document.querySelectorAll('.team').forEach(card=>{
+card.addEventListener('click',()=>{
+modal.style.display='block';
+modalBody.innerHTML='<h3>'+card.innerText+'</h3><p>Experience and expertise details here.</p>';
+});});
 
-window.addEventListener('scroll', () => {
-    let current = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (pageYOffset >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
-    });
-});
-
-/* =========================
-   SCROLL REVEAL ANIMATION
-========================= */
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-}, {
-    threshold: 0.1
-});
-
-document.querySelectorAll("section, .service-card, .team-member").forEach(el => {
-    el.classList.add("hidden");
-    observer.observe(el);
-});
-
-/* =========================
-   BUTTON CLICK FEEDBACK
-========================= */
-document.querySelectorAll(".btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-        btn.style.transform = "scale(0.96)";
-        setTimeout(() => {
-            btn.style.transform = "scale(1)";
-        }, 120);
-    });
-});
+close.onclick=()=>modal.style.display='none';
+window.onclick=e=>{if(e.target==modal)modal.style.display='none'};

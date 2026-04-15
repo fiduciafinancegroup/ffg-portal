@@ -1,268 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Fiducia Finance Group</title>
-<link rel="stylesheet" href="style.css" />
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
 </head>
+
 <body>
 
 <!-- HEADER -->
 <header>
-  <div class="container nav">
-    <div class="brand">
-      <a href="#home" class="logo-link">
-        <img src="images/Icon.png" alt="Logo" />
-      </a>
-      <h1>Fiducia Finance Group</h1>
+    <div class="container nav">
+
+        <div class="brand">
+            <!-- LOGO REFRESH PAGE -->
+            <a href="index.html">
+                <img src="images/Icon.png" alt="logo">
+            </a>
+            <h1>Fiducia Finance Group</h1>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#how">How</a>
+            <a href="#packages">Packages</a>
+            <a href="#team">Team</a>
+            <a href="#why">Why</a>
+            <a href="#faq">FAQs</a>
+            <a href="#about">About</a>
+            <a href="#contact" class="contact-btn">Contact</a>
+        </nav>
+
     </div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#how">How It Works</a>
-      <a href="#packages">Packages</a>
-      <a href="#team">Team</a>
-      <a href="#why">Why Us</a>
-      <a href="#faq">FAQ</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
 </header>
 
 <!-- HERO -->
 <section id="home" class="hero">
-  <div class="container hero-inner">
-    <h2>Financial Expertise for Ecommerce & Business Growth</h2>
-    <p class="slogan">Trust and Confidence</p>
-    <img src="images/handshake.gif" class="handshake" alt="Handshake animation" />
-    <p class="hero-desc">We handle bookkeeping, reporting, forecasting, and financial analysis—so you can focus on scaling your business with clarity and confidence.</p>
-    <div class="hero-actions">
-      <a href="#services" class="btn">Explore Services</a>
-      <a href="#contact" class="btn btn-outline">Get Started</a>
+    <div class="container hero-grid">
+
+        <div class="hero-text">
+            <h2>Financial Expertise for Ecommerce & Business Growth</h2>
+            <p class="slogan">Trust and Confidence</p>
+
+            <!-- ONLINE HANDSHAKE GIF -->
+            <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" class="handshake">
+
+            <p class="hero-desc">
+                We handle your accounting, reporting, and financial strategy—so you can focus on scaling your business with clarity and confidence.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#services" class="btn">Explore Services</a>
+                <a href="#contact" class="btn-outline">Book a Call</a>
+            </div>
+        </div>
+
     </div>
-  </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="section alt">
-  <div class="container">
-    <h3>Our Services</h3>
-    <p class="sub">Comprehensive accounting and FP&A services designed for growth-focused businesses.</p>
+<section id="services" class="section">
+    <div class="container">
 
-    <div class="grid services-grid">
-      <!-- Core Accounting -->
-      <a href="#svc-bookkeeping" class="card service">
-        <i class="fa-solid fa-book"></i>
-        <h4>Bookkeeping</h4>
-        <p>Recording daily transactions, maintaining clean ledgers, and ensuring accurate financial records.</p>
-      </a>
+        <h3>Our Services</h3>
+        <p class="sub">Comprehensive finance and accounting solutions</p>
 
-      <a href="#svc-arap" class="card service">
-        <i class="fa-solid fa-file-invoice-dollar"></i>
-        <h4>Accounts Payable & Receivable</h4>
-        <p>Managing bills, invoicing clients, and tracking collections to maintain healthy cash cycles.</p>
-      </a>
+        <div class="grid">
 
-      <a href="#svc-recon" class="card service">
-        <i class="fa-solid fa-scale-balanced"></i>
-        <h4>Bank & Account Reconciliations</h4>
-        <p>Ensuring your records match actual balances to eliminate discrepancies and errors.</p>
-      </a>
+            <!-- Each redirects to separate page -->
+            <a href="services/bookkeeping.html" class="card">
+                <i class="fa-solid fa-book"></i>
+                <h4>Bookkeeping</h4>
+                <p>Daily transaction recording and ledger management</p>
+            </a>
 
-      <a href="#svc-reporting" class="card service">
-        <i class="fa-solid fa-chart-line"></i>
-        <h4>Financial Reporting</h4>
-        <p>Monthly and quarterly reports including income statements and balance sheets for decision-making.</p>
-      </a>
+            <a href="services/ar.html" class="card">
+                <i class="fa-solid fa-file-invoice"></i>
+                <h4>Accounts Payable & Receivable</h4>
+                <p>Invoicing, collections, and bill tracking</p>
+            </a>
 
-      <!-- FP&A -->
-      <a href="#svc-budget" class="card service">
-        <i class="fa-solid fa-chart-column"></i>
-        <h4>Budgeting & Forecasting</h4>
-        <p>Plan future income and expenses with structured, data-driven forecasts.</p>
-      </a>
+            <a href="services/reconciliation.html" class="card">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <h4>Reconciliation</h4>
+                <p>Ensure financial accuracy</p>
+            </a>
 
-      <a href="#svc-cash" class="card service">
-        <i class="fa-solid fa-coins"></i>
-        <h4>Cash Flow Management</h4>
-        <p>Ensure liquidity and avoid cash shortages with proactive monitoring and planning.</p>
-      </a>
+            <a href="services/reporting.html" class="card">
+                <i class="fa-solid fa-chart-line"></i>
+                <h4>Financial Reporting</h4>
+                <p>Monthly & quarterly reports</p>
+            </a>
 
-      <a href="#svc-model" class="card service">
-        <i class="fa-solid fa-chart-pie"></i>
-        <h4>Financial Modeling</h4>
-        <p>Scenario planning for growth, investments, and risk management.</p>
-      </a>
+            <a href="services/fpa.html" class="card">
+                <i class="fa-solid fa-chart-column"></i>
+                <h4>FP&A</h4>
+                <p>Budgeting, forecasting, and strategy</p>
+            </a>
 
-      <a href="#svc-kpi" class="card service">
-        <i class="fa-solid fa-bullseye"></i>
-        <h4>KPI Tracking</h4>
-        <p>Monitor key performance indicators tailored to your business goals.</p>
-      </a>
+            <a href="services/dashboard.html" class="card">
+                <i class="fa-solid fa-table"></i>
+                <h4>Dashboard Building</h4>
+                <p>Visual KPI tracking tools</p>
+            </a>
 
-      <a href="#svc-dash" class="card service">
-        <i class="fa-solid fa-table"></i>
-        <h4>Dashboard Building</h4>
-        <p>Visual dashboards that simplify performance tracking and financial visibility.</p>
-      </a>
+        </div>
+
     </div>
-
-    <!-- Service Details -->
-    <div class="details">
-      <div id="svc-bookkeeping" class="detail"><h4>Bookkeeping</h4><p>We implement structured bookkeeping processes to record daily transactions accurately, maintain organized ledgers, and ensure your financial data is always audit-ready. Our approach reduces errors, improves visibility, and builds a strong foundation for reporting and analysis.</p></div>
-      <div id="svc-arap" class="detail"><h4>Accounts Payable & Receivable</h4><p>We streamline billing and collections by managing invoices, tracking receivables, and scheduling payables. This ensures timely cash inflows and controlled outflows, helping maintain healthy working capital.</p></div>
-      <div id="svc-recon" class="detail"><h4>Bank & Account Reconciliations</h4><p>Our reconciliation process identifies discrepancies between your books and actual balances, ensuring accuracy and preventing financial misstatements.</p></div>
-      <div id="svc-reporting" class="detail"><h4>Financial Reporting</h4><p>Receive clear, structured monthly and quarterly reports—income statements, balance sheets, and summaries—so you can make informed decisions with confidence.</p></div>
-      <div id="svc-budget" class="detail"><h4>Budgeting & Forecasting</h4><p>We develop realistic budgets and forward-looking forecasts that align with your business goals, enabling proactive planning and resource allocation.</p></div>
-      <div id="svc-cash" class="detail"><h4>Cash Flow Management</h4><p>We monitor inflows and outflows, identify gaps, and implement controls to ensure your business maintains sufficient liquidity at all times.</p></div>
-      <div id="svc-model" class="detail"><h4>Financial Modeling</h4><p>We build flexible financial models to evaluate scenarios for growth, investments, and risk—supporting strategic decision-making.</p></div>
-      <div id="svc-kpi" class="detail"><h4>KPI Tracking</h4><p>We define and track KPIs relevant to your business, providing ongoing insights into performance and areas for improvement.</p></div>
-      <div id="svc-dash" class="detail"><h4>Dashboard Building</h4><p>We design intuitive dashboards that transform complex data into clear visuals, making it easier to monitor performance at a glance.</p></div>
-    </div>
-  </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section id="how" class="section">
-  <div class="container">
-    <h3>How We Work With You</h3>
-    <p class="sub">We make the process simple and structured, even if you don’t have an existing system in place.</p>
+<section id="how" class="section alt">
+    <div class="container">
 
-    <div class="grid steps">
-      <div class="card step"><h4>1. Initial Consultation</h4><p>We discuss your business, your current setup, and your financial needs.</p></div>
-      <div class="card step"><h4>2. Process Alignment</h4><p>We either follow your existing SOPs or establish a structured workflow tailored to your business.</p></div>
-      <div class="card step"><h4>3. Access & Setup</h4><p>You provide access to accounting software, financial data, and credentials. All information is handled securely.</p></div>
-      <div class="card step"><h4>4. Execution by Our Team</h4><p>We handle bookkeeping, reporting, and financial processes based on the agreed workflow.</p></div>
-      <div class="card step"><h4>5. Review & Communication</h4><p>All work is reviewed internally before delivery. Our finance lead communicates when needed.</p></div>
-      <div class="card step"><h4>6. Ongoing Support</h4><p>We continuously support, adjust, and improve your financial processes as your business evolves.</p></div>
+        <h3>How We Work With You</h3>
+        <p class="sub">Simple, structured, and scalable</p>
+
+        <div class="horizontal-scroll">
+
+            <div class="step-card">
+                <h4>1. Consultation</h4>
+                <p>We understand your business and financial needs.</p>
+            </div>
+
+            <div class="step-card">
+                <h4>2. Alignment</h4>
+                <p>We follow or build your workflow.</p>
+            </div>
+
+            <div class="step-card">
+                <h4>3. Setup</h4>
+                <p>Secure access to systems and data.</p>
+            </div>
+
+            <div class="step-card">
+                <h4>4. Execution</h4>
+                <p>We handle financial operations.</p>
+            </div>
+
+            <div class="step-card">
+                <h4>5. Review</h4>
+                <p>Quality control and communication.</p>
+            </div>
+
+            <div class="step-card">
+                <h4>6. Support</h4>
+                <p>Continuous improvement and scaling.</p>
+            </div>
+
+        </div>
+
     </div>
-  </div>
 </section>
 
 <!-- PACKAGES -->
-<section id="packages" class="section alt">
-  <div class="container">
-    <h3>Service Packages</h3>
-    <div class="grid packages">
+<section id="packages" class="section">
+    <div class="container">
 
-      <div class="card pkg green">
-        <h4>Starter Package</h4>
-        <p class="tag">Essential Finance Support</p>
-        <ul>
-          <li>Bookkeeping</li>
-          <li>Accounts payable & receivable</li>
-          <li>Monthly reconciliations</li>
-          <li>Monthly financial reports</li>
-        </ul>
-        <p class="goal">Goal: Keep your finances accurate, organized, and up-to-date.</p>
-      </div>
+        <h3>Service Packages</h3>
 
-      <div class="card pkg blue">
-        <h4>Intermediate Package</h4>
-        <p class="tag">Growth & Visibility</p>
-        <ul>
-          <li>Everything in Starter</li>
-          <li>Budgeting & forecasting</li>
-          <li>Cash flow monitoring</li>
-          <li>KPI tracking</li>
-          <li>Enhanced reporting with insights</li>
-        </ul>
-        <p class="goal">Goal: Give clarity on financial health and enable smarter decisions.</p>
-      </div>
+        <div class="grid">
 
-      <div class="card pkg purple">
-        <h4>Advanced Package</h4>
-        <p class="tag">Strategic Finance Partner</p>
-        <ul>
-          <li>Everything in Intermediate</li>
-          <li>Financial modeling</li>
-          <li>Advanced forecasting</li>
-          <li>Deep KPI analysis</li>
-          <li>CFO-level advisory</li>
-        </ul>
-        <p class="goal">Goal: Drive growth, profitability, and long-term success.</p>
-      </div>
+            <div class="card green">
+                <h4>Starter</h4>
+                <p>Essential Finance Support</p>
+                <ul>
+                    <li>Bookkeeping</li>
+                    <li>AR/AP</li>
+                    <li>Reconciliation</li>
+                    <li>Reports</li>
+                </ul>
+            </div>
+
+            <div class="card blue">
+                <h4>Intermediate</h4>
+                <p>Growth & Visibility</p>
+                <ul>
+                    <li>Everything in Starter</li>
+                    <li>Forecasting</li>
+                    <li>Cash Flow</li>
+                    <li>KPI Tracking</li>
+                </ul>
+            </div>
+
+            <div class="card purple">
+                <h4>Advanced</h4>
+                <p>Strategic Partner</p>
+                <ul>
+                    <li>Financial Modeling</li>
+                    <li>Strategy</li>
+                    <li>CFO Insights</li>
+                </ul>
+            </div>
+
+        </div>
 
     </div>
-  </div>
 </section>
 
 <!-- TEAM -->
-<section id="team" class="section">
-  <div class="container">
-    <h3>Our Team</h3>
-    <div class="grid team-grid">
-      <div class="card team" data-member="rey"><img src="images/Rey.jpg" /><p>Rey Joemar Nayve</p></div>
-      <div class="card team" data-member="lovelyn"><img src="images/lovelyn2.jpg" /><p>Lovelyn Rulete</p></div>
-      <div class="card team" data-member="zynor"><img src="images/Zynor.jpg" /><p>Zynor Jade Nayve</p></div>
-      <div class="card team" data-member="claire"><img src="images/Claire.jpg" /><p>Kyle Claire Alcober</p></div>
+<section id="team" class="section alt">
+    <div class="container">
+
+        <h3>Our Team</h3>
+
+        <div class="grid">
+
+            <div class="team-card">Rey Joemar Nayve</div>
+            <div class="team-card">Lovelyn Rulete</div>
+            <div class="team-card">Zynor Jade Nayve</div>
+            <div class="team-card">Kyle Claire Alcober</div>
+
+        </div>
+
     </div>
-  </div>
 </section>
 
-<!-- MODAL -->
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span id="closeModal">&times;</span>
-    <div id="modalBody"></div>
-  </div>
-</div>
-
 <!-- WHY US -->
-<section id="why" class="section alt">
-  <div class="container">
-    <h3>Why Choose Fiducia Finance Group</h3>
-    <p class="sub">Unlike hiring freelancers, we provide a complete finance team—so you don’t have to recruit or manage multiple people.</p>
-    <ul class="why">
-      <li>✔ No Hiring Required</li>
-      <li>✔ Team-Based Approach</li>
-      <li>✔ Professional Oversight</li>
-      <li>✔ Flexible Service Packages</li>
-      <li>✔ Scalable Support</li>
-    </ul>
-    <p class="sub">Our team combines financial analysis, reporting, and operational expertise to ensure smooth delivery and consistent results.</p>
-  </div>
+<section id="why" class="section">
+    <div class="container">
+
+        <h3>Why Choose Us</h3>
+
+        <ul class="why">
+            <li>No Hiring Required</li>
+            <li>Team-Based Approach</li>
+            <li>Professional Oversight</li>
+            <li>Flexible Packages</li>
+            <li>Scalable Support</li>
+        </ul>
+
+    </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq" class="section">
-  <div class="container">
-    <h3>Frequently Asked Questions</h3>
+<section id="faq" class="section alt">
+    <div class="container">
 
-    <div class="faq-item"><button>Do I need to hire or manage your team?</button><div class="faq-content">No. We provide a fully managed finance and accounting team.</div></div>
-    <div class="faq-item"><button>What types of businesses do you work with?</button><div class="faq-content">We support ecommerce and service-based businesses, and others depending on needs.</div></div>
-    <div class="faq-item"><button>How do I choose the right package?</button><div class="faq-content">Book a consultation and we’ll recommend the best option.</div></div>
-    <div class="faq-item"><button>Can I upgrade later?</button><div class="faq-content">Yes, services scale as your business grows.</div></div>
-  </div>
+        <h3>Frequently Asked Questions</h3>
+
+        <div class="faq">
+
+            <div class="faq-item">
+                <button>Do I need to hire your team?</button>
+                <div class="content">No. We manage everything.</div>
+            </div>
+
+            <div class="faq-item">
+                <button>Can I upgrade?</button>
+                <div class="content">Yes anytime.</div>
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section alt">
-  <div class="container">
-    <h3>About Fiducia Finance Group</h3>
-    <p>Fiducia Finance Group is a finance and accounting team dedicated to helping businesses manage finances with clarity, structure, and confidence.</p>
-    <p>We handle bookkeeping, reporting, and financial processes through a coordinated team approach—ensuring accuracy, consistency, and reliability.</p>
-    <p class="highlight">We turn financial data into decisions that drive sustainable growth.</p>
-  </div>
+<section id="about" class="section">
+    <div class="container">
+
+        <h3>About Us</h3>
+
+        <p>
+            Fiducia Finance Group helps businesses manage finances with clarity, structure, and confidence.
+        </p>
+
+    </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
-  <div class="container">
-    <h3>Contact Us</h3>
-    <div class="actions">
-      <a href="https://wa.me/639623473350" class="btn">WhatsApp</a>
-      <a href="mailto:outsource.operationsteam@gmail.com" class="btn">Email</a>
-      <a href="https://calendly.com/outsource-operationsteam/free-finance-accounting-consultation" class="btn">Book a Call</a>
+<section id="contact" class="section alt">
+    <div class="container">
+
+        <h3>Contact Us</h3>
+
+        <div class="contact-buttons">
+            <a href="https://wa.me/639623473350" class="btn">WhatsApp</a>
+            <a href="mailto:outsource.operationsteam@gmail.com" class="btn">Email</a>
+            <a href="https://calendly.com/outsource-operationsteam/free-finance-accounting-consultation" class="btn">Book Call</a>
+        </div>
+
     </div>
-  </div>
 </section>
 
-<footer><p>© 2026 Fiducia Finance Group</p></footer>
+<footer>
+    <p>© 2026 Fiducia Finance Group</p>
+</footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
